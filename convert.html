@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <h1>
+            variables
+        </h1>
+    </body>
+    <script>
+   let obj={
+       celsius:function(fan){
+           return (fan-32)*9/5;
+       },
+       fahrenheit:function(cel){
+        return (cel+32)*5/9;
+    }
+   }
+ 
+
+    let a =parseFloat(prompt("Enter temperature"))
+    let unit = prompt("Enter the unit (Celsius or Fahrenheit):");
+    if(unit.toLowerCase()==="celsius")
+    {
+        console.log(`the temperature in celsius :${obj.celsius(a)}`)
+    }
+    if(unit.toLowerCase()==="fahrenheit")
+    {
+        console.log(`the temperature in fahrenheit:${obj.fahrenheit(a)}`)
+    }
+    </script>
+</html>
