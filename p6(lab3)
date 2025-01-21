@@ -1,0 +1,26 @@
+
+function createPromise(value) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log(`Resolved with: ${value}`);
+            resolve(value);
+        }, 1000); 
+    });
+}
+
+createPromise(5)
+    .then((value1) => {
+        return createPromise(10).then((value2) => value1 + value2);
+    }) 
+    .then((value2) => {
+        return createPromise(20).then((value4) => value2 + value4);
+    })
+    .then((partialSum) => {
+        return createPromise(15).then((value3) => partialSum + value3);
+    })
+    .then((totalSum) => {
+        console.log(`Total Sum: ${totalSum}`); 
+    })
+    .catch((error) => {
+        console.error("Error:", error);
+    });
