@@ -1,17 +1,10 @@
 [
     {
-        "fname":"satya",
-        "lname":"sai"
-    }
-    ,
-    {
-        "Age":"19",
-        "city":"hyd"
+        "name":"satya",
+        "age":30
     },
     {
-        "college":"cvr",
-        "year":"3rd"
+        "name":"satya",
+        "age":30
     }
-
-
 ]
